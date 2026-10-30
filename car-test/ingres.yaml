@@ -1,4 +1,4 @@
-# Exposes car-service at https://car.digitalwitch.online
+# Exposes car-service at https://car.cloudwithpeter.site
 # Requires a Namecheap CNAME record: car -> NGINX load balancer hostname
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -13,10 +13,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - car.digitalwitch.online
+        - car.cloudwithpeter.site
       secretName: car-service-tls
   rules:
-    - host: car.digitalwitch.online
+    - host: car.cloudwithpeter.site
       http:
         paths:
           - path: /
